@@ -1,0 +1,12 @@
+<h1>結果画面</h1>
+
+<%# <%= form_with url: fetch_api_data_result_path, method: :post do |f| %> 
+  <%# <%= f.hidden_field :large_service_area, value: params[:large_service_area] %>
+  <%# <%= f.submit 'APIから情報を取得' %>
+<%# <% end %>
+<ul>
+<% @result.each do |name| %>
+<li><%= name %></li>
+  <% end %>
+</ul>
+<%# @tasks.each do |task| %>

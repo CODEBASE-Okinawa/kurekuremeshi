@@ -1,10 +1,23 @@
+<%# 沖縄県の市町村を選択できるようにする %>
+<%# select・submitボタンを用意する %>
+<%# ボタン押下で検索結果画面に遷移する %>
+<%# areaの値をpostする %>
+<%# homes_controllerにpostする %>
+<%# searchアクションにpostする %>
+<%# postした値からホットペッパーのAPIの値を取得する %>
+<%# リダイレクトで別画面/search_resultに表示させる %>
+<%# 該当市町村にあった検索結果が取得して表示できる %>
+
 <h1>クレクレメシ</h1>
+<%= form_with url: "/homes/search", method: :get do |form| %>
+  <%= form.label :area, "Search for:" %>
+  <%= form.select :area, ["那覇", "浦添", "宜野湾", "南風原", "豊見城"],include_blank: true %>
+  <%= form.submit "決定" %>
+<% end %>
 
-  <%= form_with model: @huge do |f| %>
 
-     
-     <%= f.select :faculty, [["那覇", "那覇"], ["宜野湾", "宜野湾"], ["名護","名護"]], include_blank: "選択して下さい" %>
-
-     <%= f.submit '決定'%>
-  <% end %>
-
+  <%# <%= form_with model: @locations do |f| %>
+     <%# <%= f.select :faculty, [["那覇", "那覇"], ["宜野湾", "宜野湾"], ["名護","名護"]], include_blank: "選択して下さい" %>
+     <%# <%= f.submit '決定'%> 
+  <%# <% end %> 
+<%# </div> %>
