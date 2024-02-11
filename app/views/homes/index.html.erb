@@ -1,0 +1,10 @@
+<h1>クレクレメシ</h1>
+
+  <%= form_with model: @huge do |f| %>
+
+     
+     <%= f.select :faculty, [["那覇", "那覇"], ["宜野湾", "宜野湾"], ["名護","名護"]], include_blank: "選択して下さい" %>
+
+     <%= f.submit '決定'%>
+  <% end %>
+
